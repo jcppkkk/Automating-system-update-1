@@ -22,3 +22,14 @@
   - (E) Auto test that (B) can be applied in docker image correctly after commit pushed
     - **Try to isolate Internat access of the docker container under test** when apply (B)
 
+## Current progress
+
+- Levels
+  - [Done] Level 1: Manually prepare
+  - Level 2: Manually prepare
+  - Level 3: Write
+  - Level 4: Auto build
+  - Level 5: Auto build & test
+
+### Level 1
+將 `lv1/update.sh` 放進 docker 裡面直接執行即可
