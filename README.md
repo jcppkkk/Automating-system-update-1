@@ -33,3 +33,11 @@
 
 ### Level 1
 將 `lv1/update.sh` 放進 docker 裡面直接執行即可
+
+### Level 2
+將 `lv2` 整個資料夾放進 docker 裡面
+
+```
+cd lv2
+./update_with_no_internet.sh
+```
