@@ -44,8 +44,11 @@ cd lv2
 
 ### Level 3
 如果是在目前測試的這台 docker 的話請先執行 `setup.sh` 這隻 script，將目前 docker 的環境建制為已更新的環境
+
 之後再執行 `gen_update.sh`
+
 如果不是的話請先修改 `gen_update.sh` 中的 `rb_path` 以及 `py_path` 成正確的路徑
+
 打包完成的檔案會放在 `/tmp/auto_update`
 
 
