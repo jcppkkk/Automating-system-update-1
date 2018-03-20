@@ -28,7 +28,7 @@
   - [Done] Level 1: Manually prepare
   - [Done] Level 2: Manually prepare
   - [Done] Level 3: Write
-  - Level 4: Auto build
+  - [Done] Level 4: Auto build
   - Level 5: Auto build & test
 
 ### Level 1
@@ -51,4 +51,15 @@ cd lv2
 
 打包完成的檔案會放在 `/tmp/auto_update`
 
+### Level 4
+
+[Automating-system-update-CI](https://github.com/freetsubasa/Automating-system-update-CI) [![Build Status](https://travis-ci.org/freetsubasa/Automating-system-update-CI.svg?branch=master)](https://travis-ci.org/freetsubasa/Automating-system-update-CI)
+
+ubuntu 的部分需要先執行 `ubuntu/gen_ubuntu.sh` 產生 `pkgs.sig` 檔案，並且需要加入 git 
+
+python 的部分請務必要將 `requirements.txt` push 上 git
+
+ruby 的部分請先在本機執行 `bundle package --all --all-platforms`，並將 `Gemfile.lock` 以及 `vendor/cache` push 上 git
+
+[Release zip](https://github.com/freetsubasa/Automating-system-update-CI/releases)
 

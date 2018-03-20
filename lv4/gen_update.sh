@@ -5,12 +5,11 @@ rb_path="/opt/project-ruby"
 py_path="/opt/project-python"
 
 # Ubuntu Update
+echo "=================================================="
+echo "Starting generate the ubuntu package and update..."
+echo "=================================================="
 
-sudo unattended-upgrade --dry-run -v > update_file
-update_file=$(grep "Packages that will be upgraded: " update_file | awk -F"Packages that will be upgraded: " '{print $2}')
-sudo apt-offline set --install-package $update_file imagemagick libmagickwand-dev -- pkgs.sig
-sudo apt-offline get ./pkgs.sig --threads 2 --bundle pkgs.zip
-
+sudo apt-offline get ubuntu/pkgs.sig --threads 2 --bundle pkgs.zip
 unzip pkgs.zip && mv *.deb /tmp/auto_update/ubuntu/package
 
 # python - update the requirements.txt
