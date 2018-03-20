@@ -1,0 +1,17 @@
+language: bash
+
+script:
+  - bash gen_update.sh
+
+before_deploy:
+  - cd /tmp/auto_update
+  - zip -r source.zip . && mkdir dist && mv source.zip dist
+
+deploy:
+  provider: releases
+  api_key:
+    secure: $GH_Token
+  file: "dist/source.zip"
+  skip_cleanup: true
+  on:
+    tags: true
