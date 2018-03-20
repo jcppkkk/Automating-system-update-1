@@ -18,9 +18,9 @@ mkdir /tmp/auto_update/ubuntu/package
 echo "============================================="
 echo "Starting packed the ubuntu security update..."
 echo "============================================="
-apt update
-apt install -y apt-offline
-apt install -y zip
+sudo apt-get update
+sudo apt-get install -y apt-offline
+sudo apt-get install -y unzip 
 
 unattended-upgrade --dry-run -v > update_file
 update_file=$(grep "Packages that will be upgraded: " update_file | awk -F"Packages that will be upgraded: " '{print $2}')
